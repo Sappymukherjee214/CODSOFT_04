@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Ada Lovelace</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-image: url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3a7bc8;
+        }
+
+        main {
+            padding: 4rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4a90e2;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #fff;
+            border: 4px solid #4a90e2;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: #555;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Ada Lovelace</h1>
+            <p class="subtitle">The World's First Computer Programmer</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section container">
+            <h2>About Ada Lovelace</h2>
+            <p>Augusta Ada King, Countess of Lovelace, born on December 10, 1815, was a British mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognize that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first computer programmer.</p>
+        </section>
+
+        <section class="section container">
+            <h2>Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>1815</h3>
+                        <p>Ada Lovelace is born on December 10th in London, England.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>1833</h3>
+                        <p>Ada meets Charles Babbage and becomes fascinated with his Difference Engine.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>1843</h3>
+                        <p>Ada publishes her notes on the Analytical Engine, including the first algorithm designed for machine processing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>1852</h3>
+                        <p>Ada Lovelace passes away on November 27th at the age of 36.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2>Ada's Legacy</h2>
+            <p>Ada Lovelace's contributions to the field of computer science were not fully appreciated until long after her death. Her notes on the Analytical Engine include what is recognized as the first algorithm intended to be processed by a machine. Because of this, she is often described as the world's first computer programmer.</p>
+            <p>Beyond her technical achievements, Lovelace's approach to science and technology was unique for her time. She described her approach as "poetical science," and sought to integrate art, metaphysics, and science in her work. This holistic approach to technology continues to inspire many in the fields of science and engineering today.</p>
+        </section>
+
+        <section class="section container">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="C:\Users\user\OneDrive\Pictures\download.jpeg?height=300&width=300" alt="Portrait of Ada Lovelace">
+                <img src="C:\Users\user\OneDrive\Pictures\download (1).jpeg?height=300&width=300" alt="Babbage's Analytical Engine">
+                <img src="C:\Users\user\OneDrive\Pictures\babbage-diagrams-p1-large.png?height=300&width=300" alt="Ada's Notes on the Analytical Engine">
+                <img src="C:\Users\user\OneDrive\Pictures\A19fqCDD4iL._AC_UF1000,1000_QL80_.jpg?height=300&width=300" alt="Modern tribute to Ada Lovelace">
+            </div>
+        </section>
+
+        <section class="section container">
+            <h2>Inspirational Quote</h2>
+            <blockquote class="quote">
+                "The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform. It can follow analysis, but it has no power of anticipating any analytical relations or truths."
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tribute to Ada Lovelace. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('a[href^="#"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.pageYOffset;
+            header.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
